@@ -1,76 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Pra Minha Princesa 💖</title>
-  <style>
-    body {
-      background: linear-gradient(to bottom, #000000, #1a001a);
-      color: white;
-      text-align: center;
-      font-family: 'Georgia', serif;
-      margin-top: 15%;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz 11 meses </title>
 
-    h1 {
-      font-size: 45px;
-      color: #ff99cc;
-      text-shadow: 0 0 10px pink;
-    }
+    <style>
+        body{
+            background-color: red;
+        }
 
-    button {
-      padding: 12px 25px;
-      font-size: 18px;
-      background: #ff66b2;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      color: white;
-      transition: 0.3s;
-    }
+        .painel{
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -50px;
+        }
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+        }
 
-    button:hover {
-      background: #ff3385;
-      transform: scale(1.05);
-    }
+    </style>
 
-    #mensagem {
-      margin-top: 30px;
-      font-size: 22px;
-      display: none;
-      animation: fadeIn 2s forwards;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-  </style>
 </head>
 <body>
 
-  <h1>Oi, minha Princesa 👑💖</h1>
+    <div class="painel">
+        <h1> Feliz Dia dos Namorados</h1>
 
-  <button onclick="mostrarMensagem()">Clica aqui, amor</button>
+        <img src="https://www.reddit.com/r/DDLC/comments/7se6h4/natsuki_gif/?tl=pt-br" alt="">
 
-  <div id="mensagem">
-    Desde o dia que você entrou na minha vida,<br><br>
-    tudo ficou mais bonito.<br><br>
-    Você é minha pessoa favorita nesse mundo inteiro.<br><br>
-    Eu te amo infinitamente. ❤️
-  </div>
+        <h2>Aceita namorar comigo? </h2>
+        
 
-  <!-- Música Your Reality -->
-  <iframe width="0" height="0"
-  src="https://www.youtube.com/embed/oxxKm_O1xwo?autoplay=1&loop=1"
-  frameborder="0"
-  allow="autoplay">
-  </iframe>
+        <a href="https://youtu.be/JMswHAJaCPw?si=JaoQqF_PoEIAGfq9"><button id="sim" > Sim! </button></a>
+        <button onmouseover="fuja()" id="nao"> Não! </button>
+        
+    </div>
 
-  <script>
-    function mostrarMensagem() {
-      document.getElementById("mensagem").style.display = "block";
-    }
-  </script>
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
 
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+
+        }
+    </script>
+
+
+
+    
 </body>
 </html>
