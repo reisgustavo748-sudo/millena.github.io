@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pra Minha Princesa 💖</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #000000, #1a001a);
+      color: white;
+      text-align: center;
+      font-family: 'Georgia', serif;
+      margin-top: 15%;
+    }
+
+    h1 {
+      font-size: 45px;
+      color: #ff99cc;
+      text-shadow: 0 0 10px pink;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      background: #ff66b2;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      color: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff3385;
+      transform: scale(1.05);
+    }
+
+    #mensagem {
+      margin-top: 30px;
+      font-size: 22px;
+      display: none;
+      animation: fadeIn 2s forwards;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Oi, minha Princesa 👑💖</h1>
+
+  <button onclick="mostrarMensagem()">Clica aqui, amor</button>
+
+  <div id="mensagem">
+    Desde o dia que você entrou na minha vida,<br><br>
+    tudo ficou mais bonito.<br><br>
+    Você é minha pessoa favorita nesse mundo inteiro.<br><br>
+    Eu te amo infinitamente. ❤️
+  </div>
+
+  <!-- Música Your Reality -->
+  <iframe width="0" height="0"
+  src="https://www.youtube.com/embed/oxxKm_O1xwo?autoplay=1&loop=1"
+  frameborder="0"
+  allow="autoplay">
+  </iframe>
+
+  <script>
+    function mostrarMensagem() {
+      document.getElementById("mensagem").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
